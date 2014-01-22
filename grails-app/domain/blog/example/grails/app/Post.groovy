@@ -25,6 +25,8 @@ class Post {
 
     static mapping = {
         body type: 'text'
+        // table name: 'blog_post'
+        // body column: 'blog_body'
     }
 
    /* Events:
