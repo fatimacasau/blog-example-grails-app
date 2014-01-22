@@ -29,6 +29,14 @@ class Post {
         // body column: 'blog_body'
     }
 
+    static namedQueries = {
+        lastPostPublished {
+            eq 'published', true
+            order 'lastUpdated'
+            max(1)
+        }
+    }
+
    /* Events:
     *
     * Do not attempt to flush the session within an event (such as with obj.save(flush:true)).
