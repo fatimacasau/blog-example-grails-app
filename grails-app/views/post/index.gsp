@@ -14,7 +14,9 @@
 </head>
 <body>
 <div>
-    <g:render template="detail" model="[lastPost:lastPost]"/>
+    <g:if test="${lastPost}">
+        <g:render template="detail" model="[lastPost:lastPost]"/>
+    </g:if>
 </div>
 </body>
 </html>
