@@ -1,1 +1,0 @@
-<span>${lastPost.title}</span>
