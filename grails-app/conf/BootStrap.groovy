@@ -1,3 +1,4 @@
+import blog.example.grails.app.Author
 import blog.example.grails.app.Post
 
 class BootStrap {
@@ -32,6 +33,10 @@ Praesent varius dictum lorem nec ultricies. Nullam accumsan ante ac rutrum males
 Donec posuere sapien ut hendrerit volutpat. Nulla lobortis amet.
                     """,
                 published: true
+        ).addToAuthors(
+                new Author(name:'User 1',surname:'Prueba',username:'user1',email:'user1@mail.com')
+        ).addToAuthors(
+                new Author(name:'User 2',surname:'Prueba',username:'user2',email:'user2@mail.com')
         ).save(failOnError: true)
     }
 

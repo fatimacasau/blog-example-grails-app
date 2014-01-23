@@ -5,5 +5,5 @@
     <p>${lastPost.body}</p>
 </div>
 <div>
-    <i>Published at <g:formatDate format="dd/MM/yyyy" date="${lastPost.lastUpdated}"/> </i>
+    <i>Published at <g:formatDate format="dd/MM/yyyy" date="${lastPost.lastUpdated}"/> by ${lastPost.authors.join(",")} </i>
 </div>

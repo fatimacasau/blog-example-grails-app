@@ -14,4 +14,8 @@ class Author {
         username blank:false, unique:true
         email blank:false, email: true
     }
+
+    String toString(){
+        username
+    }
 }
