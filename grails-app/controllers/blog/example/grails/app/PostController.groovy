@@ -4,7 +4,7 @@ class PostController {
 
     def index() {
         //def lastPost = Post.last('lastUpdated')
-        def lastPost = Post.lastPostPublished().get()
+        Post lastPost = Post.lastPostPublished().get()
         [lastPost:lastPost]
     }
 }
