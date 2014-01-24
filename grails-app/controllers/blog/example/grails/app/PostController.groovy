@@ -12,4 +12,8 @@ class PostController {
         def post = Post.get(params.id)
         [post:post]
     }
+
+    def end(){
+
+    }
 }

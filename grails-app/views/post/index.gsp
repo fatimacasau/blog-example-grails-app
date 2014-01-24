@@ -23,6 +23,7 @@
         <g:render template="/comment/form" model="[post:lastPost]"/>
 
     </g:if>
+    <g:link url="[action:'end']">end</g:link>
 </div>
 </body>
 </html>
