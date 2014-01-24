@@ -33,7 +33,7 @@ class Post {
         lastPostPublished {
             eq 'published', true
             order 'lastUpdated'
-            max(1)
+            maxResults(1)
         }
     }
 
