@@ -1,9 +1,9 @@
 <div>
-    <strong>${lastPost.title}</strong>
+    <strong>${post.title}</strong>
 </div>
 <div>
-    <p>${lastPost.body}</p>
+    <p>${post.body}</p>
 </div>
 <div>
-    <i>Published at <g:formatDate format="dd/MM/yyyy" date="${lastPost.lastUpdated}"/> by ${lastPost.authors.join(",")} </i>
+    <i>Published at <g:formatDate format="dd/MM/yyyy" date="${post.lastUpdated}"/> by ${post.authors.join(",")} </i>
 </div>

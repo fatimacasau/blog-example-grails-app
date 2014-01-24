@@ -7,4 +7,9 @@ class PostController {
         Post lastPost = Post.lastPostPublished().get()
         [lastPost:lastPost]
     }
+
+    def show(){
+        def post = Post.get(params.id)
+        [post:post]
+    }
 }
