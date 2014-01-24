@@ -14,7 +14,7 @@ class Post {
 
     Boolean published
 
-    static hasMany = [authors:Author]
+    static hasMany = [authors:Author, comments:Comment]
 
     static constraints = {
         // By default, all attributes have constraint nullable:false

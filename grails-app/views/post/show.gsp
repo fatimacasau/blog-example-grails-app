@@ -14,12 +14,12 @@
 </head>
 <body>
 <div>
-    <g:if test="${lastPost}">
-        <g:render template="detail" model="[post:lastPost]"/>
+    <g:if test="${post}">
+        <g:render template="detail" model="[post:post]"/>
         <div id="listComments">
-            <g:render template="/comment/list" model="[comments:lastPost.comments]"/>
+            <g:render template="/comment/list" model="[comments:post.comments]"/>
         </div>
-        <g:render template="/comment/form" model="[post:lastPost]"/>
+        <g:render template="/comment/form" model="[post:post]"/>
 
     </g:if>
 </div>
