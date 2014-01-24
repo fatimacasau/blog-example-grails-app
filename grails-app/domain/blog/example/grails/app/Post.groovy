@@ -14,12 +14,15 @@ class Post {
 
     Boolean published
 
+    static hasMany = [authors:Author]
+
     static constraints = {
         // By default, all attributes have constraint nullable:false
         dateCreated nullable: true
         lastUpdated nullable: true
         title maxSize: 150, unique:true, blank: false
         body maxSize: 3000, blank: false
+        authors minSize: 1
         // validator: { val,obj -> // val: the value of the property. obj: the object to validate }
     }
 
@@ -33,7 +36,7 @@ class Post {
         lastPostPublished {
             eq 'published', true
             order 'lastUpdated'
-            max(1)
+            maxResults(1)
         }
     }
 
