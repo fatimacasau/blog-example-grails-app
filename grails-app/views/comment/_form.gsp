@@ -1,4 +1,4 @@
-<g:formRemote name="newComment" url="[controller:'comment',action:'save']" update="listComments">
+<g:formRemote name="newComment" url="[controller:'comment',action:'save']" update="listComments" onSuccess="clearForm()">
     <g:hiddenField name="post.id" value="${post.id}"/>
     <label for="email">Email</label>
     <g:textField name="email" required=""/>

@@ -10,26 +10,26 @@ class CommentController {
     }
 
     def save(CommentCommand cmd){
+        def post = cmd?.post?.id ? Post.get(cmd.post.id) : null
         if(cmd.hasErrors()){
-            flash.error = cmd.errors
-            if(cmd.post?.id)
-                redirect controller: 'post', action:'show', params:[id:cmd?.post?.id]
-            else redirect controller: 'post', action: 'lastPost'
+            flash.message = [type:'errors', messages:cmd.errors.allErrors*.defaultMessage]
         }else{
-            def post = Post.get(cmd.post.id)
-            post.addToComments(new Comment(cmd.properties['body','email'])).save()
-            render template: 'list', model:[comments:post.comments]
+            if (post){
+                post.addToComments(new Comment(cmd.properties['body','email'])).save(flush:true)
+                flash.message = [type:'message', messages: [message(code:'post.add.comment.success')]]
+            }
         }
+        render template: 'list', model:[comments:post?.comments?:[]]
     }
 }
 
-@Validateable
+//@Validateable
 class CommentCommand{
     String body
     String email
     Post post
 
-    static constrains = {
+    static constraints = {
         body maxSize: 1000, blank:false
         email email:true, blank:false
     }

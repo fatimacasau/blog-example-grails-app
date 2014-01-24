@@ -13,7 +13,8 @@
   <meta name="layout" content="main">
 </head>
 <body>
-<div>
+<div id="page-body" role="main">
+
     <g:if test="${lastPost}">
         <g:render template="detail" model="[post:lastPost]"/>
         <div id="listComments">

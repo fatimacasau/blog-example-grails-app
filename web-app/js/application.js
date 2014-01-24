@@ -7,3 +7,7 @@ if (typeof jQuery !== 'undefined') {
 		});
 	})(jQuery);
 }
+
+function clearForm(){
+    $('form').find("input[type=text], textarea").val("");
+}
