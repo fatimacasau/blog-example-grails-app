@@ -16,8 +16,11 @@
 <div>
     <g:if test="${lastPost}">
         <g:render template="detail" model="[post:lastPost]"/>
-        <g:render template="/comment/list" model="[comments:lastPost.comments]"/>
+        <div id="listComments">
+            <g:render template="/comment/list" model="[comments:lastPost.comments]"/>
+        </div>
         <g:render template="/comment/form" model="[post:lastPost]"/>
+
     </g:if>
 </div>
 </body>
