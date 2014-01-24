@@ -4,4 +4,5 @@
     <g:textField name="email" required=""/>
     <label for="body">Body</label>
     <g:textArea name="body" maxlength="1000" required=""/>
+    <g:submitButton name="saveComment" value="save"/>
 </g:formRemote>

@@ -16,6 +16,8 @@
 <div>
     <g:if test="${post}">
         <g:render template="detail" model="[post:post]"/>
+        <g:render template="/comment/list" model="[comments:post.comments]"/>
+        <g:render template="/comment/form" model="[post:post]"/>
     </g:if>
 </div>
 </body>
