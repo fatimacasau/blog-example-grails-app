@@ -4,6 +4,8 @@ import grails.validation.Validateable
 
 class CommentController {
 
+    def notificationService
+
     def list(){
         def post = Post.get(params.postId)
         [comments:Comment.findByPost(post)]
@@ -17,6 +19,7 @@ class CommentController {
             if (post){
                 post.addToComments(new Comment(cmd.properties['body','email'])).save(flush:true)
                 flash.message = [type:'message', messages: [message(code:'post.add.comment.success')]]
+                notificationService.commentNotification(post)
             }
         }
         render template: 'list', model:[comments:post?.comments?:[]]

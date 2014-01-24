@@ -113,3 +113,14 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+// Configuracion de mail
+grails {
+    mail {
+        host = "192.168.32.252"
+        port = 25
+    }
+}
+
+grails.mail.default.from="scrumtool@paradigmatecnologico.com"
+grails.mail.overrideAddress="fcasau@paradigmatecnologico.com"
