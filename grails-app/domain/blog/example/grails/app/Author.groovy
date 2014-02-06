@@ -7,7 +7,7 @@ class Author {
     String username
     String email
 
-    static hastMany = [post:Post]
+    static hasMany = [post:Post]
     static belongsTo = [Post]
 
     static constraints = {
