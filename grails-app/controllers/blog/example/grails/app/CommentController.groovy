@@ -19,7 +19,7 @@ class CommentController {
             if (post){
                 post.addToComments(new Comment(cmd.properties)).save(flush:true)
                 flash.message = [type:'message', messages: [message(code:'post.add.comment.success')]]
-                notificationService.commentNotification(post)
+//                notificationService.commentNotification(post)
             }
         }
         render template: 'list', model:[comments:post?.comments?:[]]
