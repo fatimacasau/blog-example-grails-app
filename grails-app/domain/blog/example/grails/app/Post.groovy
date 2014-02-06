@@ -20,7 +20,7 @@ class Post {
         lastUpdated nullable: true
         title maxSize: 150, unique:true, blank: false
         body maxSize: 3000, blank: false
-        // validator: { val,obj -> // val: the value of the property. obj: the object to validate }
+        //attr validator: { val,obj -> // val: the value of the property. obj: the object to validate }
     }
 
     static mapping = {
