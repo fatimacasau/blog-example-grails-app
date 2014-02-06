@@ -15,7 +15,7 @@ class CommentController {
             flash.message = [type:'errors', messages:cmd.errors.allErrors*.defaultMessage]
         }else{
             if (post){
-                post.addToComments(new Comment(cmd.properties['body','email'])).save(flush:true)
+                post.addToComments(new Comment(cmd.properties)).save(flush:true)
                 flash.message = [type:'message', messages: [message(code:'post.add.comment.success')]]
             }
         }
