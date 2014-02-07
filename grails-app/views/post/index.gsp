@@ -11,6 +11,7 @@
 <head>
   <title><g:message code="post.index.title"/></title>
   <meta name="layout" content="main">
+  <r:require modules="posts,comments"/>
 </head>
 <body>
 <div id="page-body" role="main">

@@ -6,7 +6,7 @@
     </div>
 </g:if>
 <g:each in="${comments}" var="comment">
-    <div>
+    <div class="comment">
         <span>Comment at <g:formatDate format="dd/MM/yyyy" date="${comment.dateCreated}"/></span>
         <span>${comment.body}</span>
     </div>
