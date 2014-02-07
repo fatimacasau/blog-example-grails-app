@@ -115,5 +115,5 @@ log4j = {
 }
 
 
-grails.mail.default.from="scrumtool@paradigmatecnologico.com"
-grails.mail.overrideAddress="fcasau@paradigmatecnologico.com"
+grails.mail.default.from="fatimacasau@gmail.com"
+grails.mail.overrideAddress="fatimacasau@gmail.com"
