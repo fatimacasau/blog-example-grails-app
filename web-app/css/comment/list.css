@@ -1,0 +1,11 @@
+#listComments{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.comment{
+    border-color: #ABBF78;
+    border-radius: 3px;
+    border-style: dashed;
+    border-width: 1px;
+}
