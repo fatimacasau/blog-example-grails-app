@@ -23,7 +23,7 @@ class Post {
         title maxSize: 150, unique:true, blank: false
         body maxSize: 3000, blank: false
         authors minSize: 1
-        // validator: { val,obj -> // val: the value of the property. obj: the object to validate }
+        //attr validator: { val,obj -> // val: the value of the property. obj: the object to validate }
     }
 
     static mapping = {
