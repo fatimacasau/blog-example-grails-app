@@ -12,6 +12,6 @@
   <title></title>
 </head>
 <body>
-<g:img dir="images" file="keep-calm-its-friday-beer-time.png"/>
+<g:img dir="images" file="keep-calm-ask-me-a-question.png"/>
 </body>
 </html>
