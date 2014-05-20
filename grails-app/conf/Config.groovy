@@ -117,3 +117,10 @@ log4j = {
 
 grails.mail.default.from="fatimacasau@gmail.com"
 grails.mail.overrideAddress="fatimacasau@gmail.com"
+
+grails {
+    mail {
+        host = "smtp.gmail.com"
+        port = 465
+    }
+}
