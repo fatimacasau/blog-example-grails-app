@@ -115,8 +115,8 @@ log4j = {
 }
 
 
-grails.mail.default.from="fatimacasau@gmail.com"
-grails.mail.overrideAddress="fatimacasau@gmail.com"
+grails.mail.default.from="youreamil@gmail.com"
+grails.mail.overrideAddress="youremail@gmail.com"
 
 grails {
     mail {
